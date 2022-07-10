@@ -1,0 +1,69 @@
+site_name: 'Personal documentation'
+site_url: https://docs.mal-noh.de/
+repo_name: aronmal/personal-docs
+repo_url: https://github.com/aronmal/personal-docs
+edit_uri: ./edit/main/docs/
+site_author: 'aronmal'
+copyright: "Copyright &copy; 2022 aronmal"
+
+theme:
+  name: material
+  palette:
+   - scheme: default
+     toggle:
+       icon: material/toggle-switch-off-outline
+       name: Dark Mode
+   - scheme: slate
+     toggle:
+       icon: material/toggle-switch
+       name: Light Mode
+  logo: assets/images/logo.png
+  favicon: assets/images/favicon.ico
+  features:
+    - navigation.top
+    - navigation.tracking
+    
+markdown_extensions:
+  - attr_list
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.magiclink
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg      
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.extra
+  - footnotes
+
+nav:
+  - 'Home': 'index.md'
+  - 'First Chapter':
+    - 'Page One': 'page-one.md'
+    - 'Page Two': 'page-two.md'
+  - 'Version': 'version.md'
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      type: iso_datetime
+      timezone: Europe/Berlin
+
+extra:
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://mal-noh.de
+    - icon: fontawesome/brands/github
+      link: https://github.com/aronmal
+    - icon: fontawesome/solid/code
+      link: https://github.com/aronmal/personal-docs
+  theme:
+    palette:
+      primary: indigo
+      accent: orange
+extra_css: [ assets/stylesheets/extra.css ]
+# extra_javascript:
+#   - assets/javascripts/client.js
